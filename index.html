@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+    background-color: #000000;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    font-size: 2em;
+    color: #ffffff;
+    cursor: default;
+}
+.logo span {
+    color: #7d2ae8;
+}
+.logo {
+    animation: colorchange1 1s infinite;
+}
+.logo span{ 
+    animation: colorchange2 1s infinite;
+}
+@keyframes colorchange1 {
+0% , 50% {
+    color:#7d2ae8;
+}
+100% {
+    color:#ffffff;
+}
+}
+@keyframes colorchange2 {
+0% , 50% {
+    color:#ffffff;
+}
+100% {
+    color:#7d2ae8;
+}
+}
+.navigation {
+    margin-left: -200px;
+}
+.navigation a {
+    color: #ffffff;
+    font-size: 1.1em;
+    text-decoration: none;
+    margin-right: 40px;
+    font-weight: 500;
+    transition: .3s;
+    
+}
+.navigation a:hover {
+    color: #7d2ae8;
+}
+.home {
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.typewriter h1 {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden;
+    border-right: .15em solid rgb(255, 255, 255);
+    font-size: 3em;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation:
+      typing 3.5s steps(30, end)  infinite, /* Modified to add a 5-second pause */
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    0% { width: 0 }
+    85% { width: 100% }
+    90% { width: 100% } /* Added to maintain the final width */
+    100% { width: 100% } /* Added to maintain the final width */
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(255, 255, 255) }
+  }
+
+  .typewriter h3 {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden;
+    border-right: .15em solid rgb(255, 255, 255);
+    font-size: 2em;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation:
+      typing 3.5s steps(30, end)  infinite, /* Modified to add a 5-second pause */
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    0% { width: 0 }
+    85% { width: 100% }
+    90% { width: 100% } /* Added to maintain the final width */
+    100% { width: 100% } /* Added to maintain the final width */
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(255, 255, 255) }
+  }
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 1s ease-in forwards;
+  }
+  
+@keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .scale-rotate {
+    transform: scale(1) rotate(0deg);
+  }
+  .logo:hover {
+    transform: scale(2.3);
+  }
+
+/* Path: style.css */
+/* Compare this snippet from css/style.css: */
+.about {
+    text-align: center;
+    padding-block: clamp(8rem,25vh,25vh);
+  }
+  .about h2 {
+    font-size: 5rem;
+    line-height: 1;
+  }
+  .about p {
+    font-size: 1.75rem; 
+    line-height: 1.3;
+    max-width: 55ch;
+    margin-inline: auto;
+  
+  }
+  .about > * {
+    margin: 0;
+  }
+  
+  .about span {
+    color: hsl(0 0% 100%/0.2);
+    background-image: linear-gradient(90deg ,white,purple);
+    background-clip: text;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    animation: scroll-reveal linear forwards;
+    animation-timeline: view();
+  }
+  .about h2 span{
+    animation-range-start: cover 8vh;
+    animation-range-end: cover 19.56vh;
+  }
+  .about p span{
+    animation-range-start: cover 11vh;
+    animation-range-end: cover 50vh;
+  }
+  @keyframes scroll-reveal {
+    to {background-size: 100% 100%;}
+  }
+  .education {
+    text-align: center;
+    padding-block: clamp(8rem,25vh,25vh);
+}
+.education h2 {
+    font-size: 5rem;
+    line-height: 1;
+    margin: 40px;
+}
+.education li {
+    font-size: 1.75rem; 
+    line-height: 1.3;
+    max-width: 70ch;
+    margin-bottom: 10px;
+    margin-inline: auto;
+
+}
+.education > * {
+    margin: 0;
+}
+
+.education span {
+    color: hsl(0 0% 100%/0.2);
+    background-image: linear-gradient(90deg ,white,purple);
+    background-clip: text;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    animation: scroll-reveal linear forwards;
+    animation-timeline: view();
+}
+.education h2 span{
+    animation-range-start: cover 9vh;
+    animation-range-end: cover 20vh;
+}
+.education li span{
+    animation-range-start: cover 8vh;
+    animation-range-end: cover 15vh;
+}
+@keyframes scroll-reveal {
+    to {background-size: 100% 100%;}
+}
+.experience {
+    text-align: center;
+    padding-block: clamp(8rem, 55vh, 35vh);
+}
+
+.experience h2 {
+    font-size: 3rem;
+    line-height: 1;
+    margin: 20px;
+}
+.experience h3{
+    font-size: 2rem;
+    line-height: 1;
+    margin-left: 690px;
+    font-weight: 500;
+    max-width: 50vh;
+
+}
+.experience p {
+    font-size: 1.75rem;
+    line-height: 1.3;
+    max-width: 23ch;
+    margin-inline: auto;
+}
+
+.experience > * {
+    margin: 0;
+}
+
+.experience span {
+    color: hsl(0 0% 100%/0.2);
+    background-image: linear-gradient(90deg, white, purple);
+    background-clip: text;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    animation: scroll-reveal linear forwards;
+    animation-timeline: view();
+}
+
+.experience h2 span {
+    animation-range-start: cover 8vh;
+    animation-range-end: cover 19.56vh;
+}
+
+.experience h3 span {
+    animation-range-start: cover 11vh;
+    animation-range-end: cover 35vh;
+}
+
+@keyframes scroll-reveal {
+    to {
+        background-size: 100% 100%;
+    }
+}
+
+.experience p span {
+    animation-range-start: cover 14vh;
+    animation-range-end: cover 70vh;
+}
+
+:root {
+  --card-width: 250px;
+  --item-width: 100px;
+  --item-bg-color: rgb(59, 177, 255);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main > p {
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    margin: 10px;
+  }
+}
+
+h1 {
+  text-shadow: 1px 3px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* The Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  background-color: rgb(101, 15, 172, 0.2); /* Black w/ opacity */
+}
+
+.modal h2 {
+  margin-bottom: 2rem;
+}
+
+.modal-content {
+  position: relative;
+  display: grid;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border: 1px solid #888;
+  width: 95%;
+  max-width: 1000px;
+  overflow-y: inherit;
+}
+
+#closeBtn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #ffffff;
+  background-color: #ff0000;
+  border-radius: 40%;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 4px 1px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#closeBtn:hover,
+#closeBtn:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h1,
+h2 {
+  text-align: center;
+  font-family: "popins", sans-serif;
+}
+
+h2 {
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.card pre,
+.card p {
+  display: none;
+}
+
+code {
+  font-family: "popins", sans-serif;
+}
+
+.showModalBtn {
+  padding: 0.5rem 0;
+  width: 80%;
+  place-self: center;
+  background-color: transparent;
+  border:  rgb(249, 2, 249) 1px solid;
+  border-radius: 5px;
+  box-shadow: rgb(249, 2, 249) 0 1px 2px 0px;
+}
+
+.showModalBtn:hover {
+  cursor: pointer;
+  box-shadow:0 4px 5px rgb(150, 2, 249), 0 4px 5px rgb(191, 0, 255) ;
+}
+
+.card-container {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(var(--card-width), 1fr));
+}
+
+.card {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0.8) 40%,
+    rgba(101, 15, 172, 0.8) 100%
+  );
+  position: relative;
+  display: grid;
+  padding: 0 5px;
+  padding-bottom: 25px;
+  gap: 20px;
+  border-radius: 5px;
+  border: rgb(255, 0, 230) 1px solid;
+  box-shadow: 0 1px 3px rgb(249, 2, 249), 0 1px 2px rgb(249, 2, 249);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.card:hover {
+  box-shadow: 0 40px 58px rgb(249, 2, 249), 0 10px 10px rgb(249, 2, 249);
+}
+
+.rounded-rectangle {
+  width: var(--item-width);
+  height: var(--item-width);
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.rectangle {
+  background: rgb(255, 255, 255);
+  width: var(--item-width);
+  height: var(--item-width);
+  margin: 0 auto;
+}
+
+.drop-shadow {
+  box-shadow: rgba(89, 0, 171, 0.2) 0px 4px 4px 0px;
+  background-image: url(https://i.postimg.cc/02bvVp6X/logo.gif);
+}
+
+.floating {
+}
+
+.sunken {
+  box-shadow: rgb(223, 222, 222) 0px 0px 6px 1px inset;
+  background-image: url(https://cdn.imgpaste.net/2021/01/12/U0oK2.png);
+  background-color: rgba(233, 233, 233, 0.25);
+}
+
+.glow {
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 20px rgba(245, 1, 237, 0.8), 0 0 30px rgba(245, 1, 237, 0.6);
+}
+
+.vignette {
+  background-image: url(https://cdn.imgpaste.net/2021/01/12/U0oK2.png);
+  /* background-image: url(img/bicycle.jpg);*/
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  box-shadow: rgba(50, 50, 93, 0.75) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.8) 0px 18px 36px -18px inset;
+}
+
+.queue-vertical {
+  border: 2px solid blue;
+  box-shadow: white 0 -8px 0px -6px, blue 0 -8px 0px -4px,
+    white 0 -16px 0px -10px, blue 0 -16px 0px -8px, white 0 -24px 0px -14px,
+    blue 0 -24px 0px -12px;
+}
+
+.queue-offset1 {
+  border: 2px solid blue;
+  box-shadow: white -10px -10px 0px -3px, blue -10px -10px 0px -1px,
+    white -20px -20px 0px -3px, blue -20px -20px 0px -1px;
+}
+
+.queue-offset2 {
+  border: 2px solid blue;
+  box-shadow: white 10px -10px 0px -3px, blue 10px -10px 0px -1px,
+    white 20px -20px 0px -3px, blue 20px -20px 0px -1px;
+}
+
+.multiple-outlines {
+  box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px,
+    rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px,
+    rgb(255, 85, 85) 0px 0px 0px 15px;
+}
+
+.stack-vertical {
+  border: 1px solid blue;
+  box-shadow: rgba(59, 46, 240, 1) 0px 4px, rgba(59, 46, 240, 0.3) 0px 7px,
+    rgba(59, 46, 240, 0.2) 0px 10px, rgba(59, 46, 240, 0.1) 0px 12px;
+}
+
+.stack-offset1 {
+  border: 1px solid blue;
+  box-shadow: rgba(59, 46, 240, 0.4) -5px 5px, rgba(59, 46, 240, 0.4) -10px 10px,
+    rgba(59, 46, 240, 0.3) -15px 15px;
+}
+
+.stack-offset2 {
+  border: 1px solid blue;
+  box-shadow: rgba(59, 46, 240, 0.4) 5px 5px, rgba(59, 46, 240, 0.4) 10px 10px,
+    rgba(59, 46, 240, 0.3) 15px 15px;
+}
+
+.neumorphism {
+  background: #e0e0e0;
+}
+
+.neumporphism-flat {
+  border-radius: 50px;
+  background-color: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.neumporphism-concave {
+  border-radius: 50px;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.neumporphism-convex {
+  border-radius: 50px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.neumporphism-pressed {
+  border-radius: 50px;
+  background-color: #e0e0e0;
+  box-shadow: inset 20px 20px 60px #bebebe, inset -20px -20px 60px #ffffff;
+}
+
+.png-shadow {
+  height: var(--item-width);
+  justify-self: center;
+  filter: drop-shadow(20px 10px 1px rgba(0, 0, 0, 0.432));
+}
+
+.group {
+  position: relative;
+  height: var(--item-width);
+  width: var(--item-width);
+  justify-self: center;
+  filter: drop-shadow(20px 10px 1px rgba(0, 0, 0, 0.432));
+}
+
+.group div {
+  position: absolute;
+  background-color: var(--item-bg-color);
+}
+
+.group img {
+  position: absolute;
+  top: -50px;
+  height: inherit;
+}
+
+#svg-shadow {
+  height: var(--item-width);
+  place-self: center;
+}
+
+.shoe {
+  fill: #6562cf;
+}
+
+.path-shadow {
+  filter: url(#shadow);
+}
+
+.target {
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0px 10px 0px -4px white, 0px -10px 0px -4px white,
+    10px 0px 0px -4px white, -10px 0px 0px -4px white, 0px 0px 0px 5px red;
+}
+
+.eye {
+  border-radius: 50%;
+  box-shadow: 0 70px 0 -40px rgb(53, 32, 0) inset, 0 0 0 20px white inset,
+    0 0 0 25px rgb(40, 173, 0) inset, 0 0 0 40px #83d872 inset,
+    0 0 0 49px rgb(12, 12, 12) inset, 0 0 0 50px rgba(255, 255, 255) inset,
+    0 0px 0 2px rgb(53, 32, 0), 0 0 0 10px rgb(75, 45, 0);
+}
+
+.text-shadow {
+  place-self: center;
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: "Pacifico", Helvetica, sans-serif;
+  background-color: hotpink;
+  vertical-align: middle;
+  height: var(--item-width);
+  padding: 0 1rem;
+}
+
+.text-drop-shadow {
+  color: blue;
+  text-shadow: -1px 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+.text-drop-shade {
+  color: blue;
+  text-shadow: -2px 1px 0 hotpink, -6px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+.text-3d-shadow {
+  font-family: "Alfa Slab One", sans-serif;
+  background-color: rgb(0, 0, 0);
+  text-shadow: 0 1px darkgrey, -1px 0 lightgrey, -1px 2px darkgrey,
+    -2px 1px lightgrey, -2px 3px darkgrey, -3px 2px lightgrey, -3px 4px darkgrey,
+    -4px 3px lightgrey, -4px 5px darkgrey, -5px 4px lightgrey, -5px 6px darkgrey,
+    -6px 5px lightgrey, -6px 7px darkgrey, -7px 6px lightgrey, -7px 8px darkgrey,
+    -8px 7px lightgrey;
+}
+/* .contact h2{
+  font-size: 3rem;
+  line-height: 1;
+  margin: 40px;
+  show
+  color: #7d2ae8;
+  font-family: 'Poppins', sans-serif;
+}
+*/
+.contact-meeting {
+  display: flex;
+  align-items: flex-start;
+}
+
+.contact-form {
+  flex: 1;
+  margin-right: 20px; /* Adjust the spacing between the form and meeting container */
+}
+
+.meeting-container {
+  flex: 1;
+}
+.contact-form {
+background-color: #f9f9f9;
+padding: 20px;
+border-radius: 5px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+margin-left: 650px;
+max-width: 600px;
+}
+.contact-form:hover{
+  box-shadow: 0 20px 40px rgb(249,2,249), 0 20px 40px rgb(249,2,249);
+}
+
+.contact-form h2 {
+margin-bottom: 10px;
+background-image: linear-gradient(90deg, white, purple);
+background-clip: text;
+background-size: 0% 100%;
+background-repeat: no-repeat;
+font-size: 3rem;
+margin: 40px;
+font-family: 'Poppins', sans-serif;
+}
+
+.contact-form label {
+display: block;
+margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+width: 95%;
+align-items: center;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 3px;
+margin-bottom: 10px;
+}
+
+.contact-form button {
+  background-color: #7d2ae8;
+  color: #fff;
+  padding: 10px 30px;
+  border: 2px solid #7d2ae8;  /* Added border style */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: transparent;
+  color: #7d2ae8;
+  border-color: #7d2ae8;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h2 class="logo fade-in"><span><</span><span>></span></h2>
+        <nav class="navigation fade-in">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        </header>
+<section class="home" id="home">
+    <div class="typewriter">
+        <h1>Bandalac Ion Cristian</h1>
+        <h3>FrontEnd Developer | Designer</h3>
+      </div>
+</section>
+<section class="about" id="about">
+    <h2><span>About Me</span></h2>
+    <p><span>I am currently pursuing my IB diploma in Denmark and courses in computer science at the University of Michigan.I have a strong passion for learning and exploring new technologies and domains. 
+        I have acquired multiple certifications in data science, front-end development, and HTML from Codecademy and Forage.
+        I have also developed several web applications and data visualizations using various programming languages and frameworks.
+        Some of the skills that I can bring to the team are my problem-solving, customer service, and programming abilities.        </span>
+    </p>
+</section>
+<section class="education" id="education">
+    <h2 class="educationme"><span>Education</span</h2>
+ <ul><span>
+        <li><span>IB Diploma - Aug 2023 - May 2025 - Struer Statsgymnasium, Denmark</span></li>
+        <li><span>Courses in Computer Science - Aug 2023 - Sep 2023 - University of Michigan, USA</span></li>
+        <li><span>Highschool - Sep 2012 - May 2023 - Prometeu-Prim, Moldova</span></li>
+ </span></ul>
+</section>
+<section class="experience" id="experience">
+    <h2><span>Projects</span></h2>
+    <h3><span>Currently I am a freelancer, working on self-owned contracts from companies making web pages and designing them.
+        Below you can see some of my projects.
+    </span>
+</h3>   
+<section>
+<main>
+    <h1>MyRentalCars</h1>
+    <p>This is a demonstration of some of what you can do with shadow properties.</p>
+    <div class="card-container">
+      <div class="card">
+        <h2>MyRental Cars</h2>
+        <div class="rounded-rectangle drop-shadow"></div>
+        <p>
+          My Rental Car is a project that has been in the makings for the last years.</p>
+        <p>The company is located in the capital city of Moldova, Chisinau. For the project we have used programming languages like css, php, javascript, html, etc.
+            The project has come along great with the site being fully functional and ready to be used by the public in the near future of 2024. Below you can see some of the code used for the project.
+        </p>
+        <pre><code class="language-css"
+              >.drop-shadow {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 4px 0px;
+  }</code
+            ></pre>
+        <button class="showModalBtn">Show Details</button>
+      </div>
+      <div class="card">
+        <h2>Web Portfolio's</h2>
+        <div class="rounded-rectangle floating"></div>
+        <p>To create a floating effect, you cast a light offset shadow below the element.</p>
+        <p>The code below is what Material Design uses for its <a href="https://material.io/components/buttons-floating-action-button">floating action buttons</a>.</p>
+        <pre><code class="language-css">.floating {
+    box-shadow:
+      0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+      0px 6px 10px 0px rgba(0, 0, 0, 0.14),
+      0px 1px 18px 0px rgba(0,0,0,.12);
+  }</code></pre>
+        <p>You could simplify it to a single shadow (as below) if you wish, but it won't as smooth and nuanced.</p>
+        <pre><code class="language-css">.floating {
+    box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.2),
+  }</code></pre>
+        <button class="showModalBtn">Show Details</button>
+      </div>
+      <div class="card">
+        <h2>JS Calculator</h2>
+        <div class="rounded-rectangle sunken"></div>
+        <p>You can use a shadow to show that something is sunken into a surface. To achieve this you want to use an inner shadow - a shadow inside the content area of the element.</p>
+        <p>You use the <code>inset</code> keyword with <code>box-shadow</code> to create inner shadows. A subtle contrast works best most of the time. Use a slightly darker color than the background color, and a blur radius to spread and soften the shadow around the edges of the element. It creates a darker bevel really.</p>
+        <pre><code class="language-css">.sunken {
+      box-shadow: rgb(223, 222, 222) 0px 0px 6px 1px inset;
+      background-color: rgba(233, 233, 233, 0.25);
+  }</code></pre>
+        <p>This example looks like a checkbox. You can use linear gradients and multiple shadows to create more nuanced effects.</p>
+        <button class="showModalBtn">Show Details</button>
+      </div>
+      <div class="card">
+        <h2>Coming Soon</h2>
+        <div class="rounded-rectangle glow"></div>
+        <p>To create a glowing effect, you can add multiple shadows with increasing blur radii and lighter colors.</p>
+        <p>This example is like a bright light. We use 2 shadows with no offsets. Each subsequent shadow has a larger blur radius, and has a lighter color (more transparent). This creates a diffuse effect.</p>
+        <pre><code class="language-css">.glow {
+       border-radius: 50%;
+       background-color: rgb(255, 238, 0);
+       box-shadow: 0 0 20px rgba(255, 230, 0, 0.8),
+                   0 0 30px rgba(255, 230, 0, 0.6);
+  }</code></pre>
+        <button class="showModalBtn">Show Details</button>
+      </div>
+     
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <button id="closeBtn">&times;</button>
+        </div>
+    </div>
+        </main>
+        </section>
+        <script>
+   window.onload = function(){ 
+         let modal = document.getElementById("myModal");
+let closeBtn = document.getElementById("closeBtn");
+
+closeBtn.onclick = function () {
+  hideModal();
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    hideModal();
+  }
+};
+
+window.addEventListener("keydown", (event) => {
+  console.log(event);
+  if (event.key.toUpperCase() === "ESCAPE") {
+    hideModal();
+  }
+});
+
+let cardButtons = document.getElementsByClassName("showModalBtn");
+let modalContent = document.getElementsByClassName("modal-content")[0];
+
+for (let cardButton of cardButtons) {
+  cardButton.addEventListener("click", (event) => {
+    cloneContent(event.target.parentElement);
+    showModal();
+  });
+}
+
+function cloneContent(target) {
+  let children = target.children;
+
+  for (name of target.classList) {
+    if (name === "neumorphism") {
+      modalContent.classList.add("neumorphism");
+    }
+  }
+
+  for (child of children) {
+    let clone = child.cloneNode(true);
+    if (child.className !== "showModalBtn") {
+      modalContent.append(clone);
+    }
+    modalContent.append(closeBtn);
+  }
+}
+
+function showModal() {
+  modal.style.display = "block";
+}
+
+function hideModal() {
+  modal.style.display = "none";
+  resetModal();
+}
+
+function resetModal() {
+  modalContent.innerHTML = "";
+  modalContent.classList.remove("neumorphism");
+}
+   }
+        </script>
+</section>
+</section>
+<section class="contact" id="contact">
+    <form>
+        <h2>Contact Form</h2>
+        <div class="contact-form">
+            <h2>Contact<span> Me</span></h2>
+            <form id="contactForm" action="submit_form.php" method="post">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+  
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+  
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+  
+              <button type="button" onclick="submitForm()">Submit</button>
+            </form>
+          </div>
+    </form>
+</section>
+<script>
+
+function submitForm() {
+    // Get form values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Perform form validation
+    if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+      alert('Please fill in all fields');
+      return;
+    }
+
+    // Send form data to server (replace with your own implementation)
+    // Example using fetch API
+    fetch('submit_form.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ name, email, message })
+    })
+      .then(response => response.json())
+      .then(data => {
+        // Handle response from server
+        console.log(data);
+        alert('Form submitted successfully');
+        document.getElementById('contactForm').reset();
+      })
+      .catch(error => {
+        // Handle error
+        console.error(error);
+        alert('An error occurred while submitting the form');
+      });
+  }
+
+  // Add event listener to the form submit button
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    submitForm();
+  });
+
+</script>
+</body>
+</html>
